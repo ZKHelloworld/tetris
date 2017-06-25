@@ -38,15 +38,15 @@ class Square extends egret.Shape {
     }
 
     private draw(color: number, x: number, y:number) {
-        // border
+        // border box
         this.graphics.beginFill(Square.BORDER_COLOR);
         this.graphics.drawRect(x, y, Square.SIZE, Square.SIZE);
 
-        // shadow square
+        // shadow box
         this.graphics.beginFill(this.darken(color));
         this.graphics.drawRect(x + 2, y + 2, Square.SIZE - 4, Square.SIZE - 4);
 
-        // real square
+        // content box
         this.graphics.beginFill(color);
         this.graphics.drawRect(x + 6, y + 6, Square.SIZE - 12, Square.SIZE - 12);
 

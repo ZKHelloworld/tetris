@@ -115,15 +115,11 @@ class Main extends egret.DisplayObjectContainer {
      * Create a game scene
      */
     private createGameScene() {
-        let first: Square = new Square(0x223344, 0, 0);
-        let second: Square = new Square(0x332211, 0, 50);
-        let third: Square = new Square(0xcc99ee, 0, 100);
-        let fourth: Square = new Square(0xff6688, 0, 150);
+        let block: Block = new Block(Block.randomShape());
 
-        this.addChild(first);
-        this.addChild(second);
-        this.addChild(third);
-        this.addChild(fourth);
+        this.addChild(block);
+
+        setInterval(() => block.redraw(Block.randomShape()), 500);
     }
 }
 
