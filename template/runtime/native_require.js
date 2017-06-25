@@ -8,8 +8,10 @@ var game_file_list = [
 	"libs/modules/res/res.js",
 	"libs/modules/tween/tween.js",
 	"polyfill/promise.js",
+	"bin-debug/Block.js",
 	"bin-debug/LoadingUI.js",
 	"bin-debug/Main.js",
+	"bin-debug/Square.js",
 	//----auto game_file_list end----
 ];
 
