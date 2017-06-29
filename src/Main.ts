@@ -115,11 +115,72 @@ class Main extends egret.DisplayObjectContainer {
      * Create a game scene
      */
     private createGameScene() {
-        let block: Block = new Block(Block.randomShape());
+        let block0: Block = new Block(Shape.DOT);
+        let block1: Block = new Block(Shape.LINE_TWO);
+        let block2: Block = new Block(Shape.LINE_THREE);
+        let block3: Block = new Block(Shape.LINE_FOUR);
+        let block4: Block = new Block(Shape.CORNOR_THREE);
+        let block5: Block = new Block(Shape.CORNOR_FOUR);
+        let block6: Block = new Block(Shape.CORNOR_FOUR_REVERSE);
+        let block7: Block = new Block(Shape.THREE_WITH_DOT);
+        let block8: Block = new Block(Shape.Z);
+        let block9: Block = new Block(Shape.Z_REVERSE);
+        let block10: Block = new Block(Shape.SQUARE);
 
-        this.addChild(block);
+        this.addChild(block0);
+        this.addChild(block1);
+        this.addChild(block2);
+        this.addChild(block3);
+        this.addChild(block4);
+        this.addChild(block5);
+        this.addChild(block6);
+        this.addChild(block7);
+        this.addChild(block8);
+        this.addChild(block9);
+        this.addChild(block10);
 
-        setInterval(() => block.redraw(Block.randomShape()), 500);
+        block0.x = 0;
+        block0.y = 0;
+        block1.x = 200;
+        block1.y = 0
+        block2.x = 400;
+        block2.y = 0
+
+        block3.x = 0;
+        block3.y = 200;
+        block4.x = 200;
+        block4.y = 200;
+        block5.x = 400;
+        block5.y = 200;
+
+        block6.x = 0;
+        block6.y = 400;
+        block7.x = 200
+        block7.y = 400;
+        block8.x = 400;
+        block8.y = 400;
+
+        block9.x = 0; 
+        block9.y = 600;
+        block10.x = 200;
+        block10.y = 600;
+
+        let direction: number = 0;
+        setInterval(() => {
+            direction = ++direction % 4;
+
+            block0.changeDirection(direction);
+            block1.changeDirection(direction);
+            block2.changeDirection(direction);
+            block3.changeDirection(direction);
+            block4.changeDirection(direction);
+            block5.changeDirection(direction);
+            block6.changeDirection(direction);
+            block7.changeDirection(direction);
+            block8.changeDirection(direction);
+            block9.changeDirection(direction);
+            block10.changeDirection(direction);
+        }, 500);
     }
 }
 
